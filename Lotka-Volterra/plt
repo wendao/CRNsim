@@ -1,6 +1,6 @@
 set term png size 800,600
 set output 'plot.png'
-plot "model_output/stats/means.txt" u ($1/3600):2 w l lw 2 lc rgb "red" t "X1", "" u ($1/3600):3 w l lw 2 lc rgb "green" t "X2"
 set xlabel "time hrs"
 set ylabel "concentration"
+plot "model_output/stats/means.txt" u ($1/3600):2 w l lw 4 lc rgb "dark-red" t "X1", "" u ($1/3600):3 w l lw 4 lc rgb "dark-green" t "X2"
 exit
