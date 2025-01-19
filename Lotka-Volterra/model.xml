@@ -19,7 +19,7 @@
       <Id>R1</Id>
       <Description> X1 + X2 -> 2X2 </Description>
       <Type>mass-action</Type>
-      <Rate>0.0000005</Rate>
+      <Rate>0.00000005</Rate>
       <Reactants>
         <SpeciesReference id="X1" stoichiometry="1"/>
         <SpeciesReference id="X2" stoichiometry="1"/>
@@ -32,7 +32,7 @@
       <Id>R2</Id>
       <Description> X1 -> 2X1 </Description>
       <Type>mass-action</Type>
-      <Rate>0.0333</Rate>
+      <Rate>1/300</Rate>
       <Reactants>
         <SpeciesReference id="X1" stoichiometry="1"/>
       </Reactants>
@@ -44,7 +44,7 @@
       <Id>R3</Id>
       <Description> X2 -> 0 </Description>
       <Type>mass-action</Type>
-      <Rate>0.0333</Rate>
+      <Rate>1/300</Rate>
       <Reactants>
         <SpeciesReference id="X2" stoichiometry="1"/>
       </Reactants>
