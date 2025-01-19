@@ -1,0 +1,55 @@
+<Model>
+  <Description>Lotka-Volterra oscillator</Description>
+  <NumberOfReactions>3</NumberOfReactions>
+  <NumberOfSpecies>2</NumberOfSpecies>
+
+  <SpeciesList>
+     <Species>
+       <Id>X1</Id>
+       <InitialPopulation>250000</InitialPopulation>
+     </Species>
+     <Species>
+       <Id>X2</Id>
+       <InitialPopulation>50000</InitialPopulation>
+     </Species>
+  </SpeciesList>
+
+  <ReactionsList>
+    <Reaction>
+      <Id>R1</Id>
+      <Description> X1 + X2 -> 2X2 </Description>
+      <Type>mass-action</Type>
+      <Rate>0.0000005</Rate>
+      <Reactants>
+        <SpeciesReference id="X1" stoichiometry="1"/>
+        <SpeciesReference id="X2" stoichiometry="1"/>
+      </Reactants>
+      <Products>
+        <SpeciesReference id="X2" stoichiometry="2"/>
+      </Products>
+    </Reaction>
+    <Reaction>
+      <Id>R2</Id>
+      <Description> X1 -> 2X1 </Description>
+      <Type>mass-action</Type>
+      <Rate>0.0333</Rate>
+      <Reactants>
+        <SpeciesReference id="X1" stoichiometry="1"/>
+      </Reactants>
+      <Products>
+        <SpeciesReference id="X1" stoichiometry="2"/>
+      </Products>
+    </Reaction>
+    <Reaction>
+      <Id>R3</Id>
+      <Description> X2 -> 0 </Description>
+      <Type>mass-action</Type>
+      <Rate>0.0333</Rate>
+      <Reactants>
+        <SpeciesReference id="X2" stoichiometry="1"/>
+      </Reactants>
+    </Reaction>
+  </ReactionsList>
+</Model>
+
+
