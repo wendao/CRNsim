@@ -1,0 +1,88 @@
+<Model>
+  <Description>Oregonator (limit cycle oscillator)</Description>
+  <NumberOfReactions>6</NumberOfReactions>
+  <NumberOfSpecies>3</NumberOfSpecies>
+
+  <SpeciesList>
+     <Species>
+       <Id>X1</Id>
+       <InitialPopulation>10000</InitialPopulation>
+     </Species>
+     <Species>
+       <Id>X2</Id>
+       <InitialPopulation>45000</InitialPopulation>
+     </Species>
+     <Species>
+       <Id>X3</Id>
+       <InitialPopulation>10000</InitialPopulation>
+     </Species>
+  </SpeciesList>
+
+  <ReactionsList>
+    <Reaction>
+      <Id>R1</Id>
+      <Description> X2 -> X1 </Description>
+      <Type>mass-action</Type>
+      <Rate>3.889e-7</Rate>
+      <Reactants>
+        <SpeciesReference id="X2" stoichiometry="1"/>
+      </Reactants>
+      <Products>
+        <SpeciesReference id="X1" stoichiometry="1"/>
+      </Products>
+    </Reaction>
+    <Reaction>
+      <Id>R2</Id>
+      <Description> X1 + X2 -> 0 </Description>
+      <Type>mass-action</Type>
+      <Rate>5e-8</Rate>
+      <Reactants>
+        <SpeciesReference id="X1" stoichiometry="1"/>
+        <SpeciesReference id="X2" stoichiometry="1"/>
+      </Reactants>
+    </Reaction>
+    <Reaction>
+      <Id>R3</Id>
+      <Description> X1 -> 2X1 + X3 </Description>
+      <Type>mass-action</Type>
+      <Rate>0.00232</Rate>
+      <Reactants>
+        <SpeciesReference id="X1" stoichiometry="1"/>
+      </Reactants>
+      <Products>
+        <SpeciesReference id="X1" stoichiometry="2"/>
+        <SpeciesReference id="X3" stoichiometry="1"/>
+      </Products>
+    </Reaction>
+    <Reaction>
+      <Id>R4</Id>
+      <Description> 2X1 -> 0 </Description>
+      <Type>mass-action</Type>
+      <Rate>1.25e-9</Rate>
+      <Reactants>
+        <SpeciesReference id="X1" stoichiometry="2"/>
+      </Reactants>
+    </Reaction>
+    <Reaction>
+      <Id>R5</Id>
+      <Description> X3 -> X2 </Description>
+      <Type>mass-action</Type>
+      <Rate>0.00198</Rate>
+      <Reactants>
+        <SpeciesReference id="X3" stoichiometry="1"/>
+      </Reactants>
+      <Products>
+        <SpeciesReference id="X2" stoichiometry="1"/>
+      </Products>
+    </Reaction>
+    <Reaction>
+      <Id>R6</Id>
+      <Description> X3 -> 0 </Description>
+      <Type>mass-action</Type>
+      <Rate>1.195e-5</Rate>
+      <Reactants>
+        <SpeciesReference id="X3" stoichiometry="1"/>
+      </Reactants>
+    </Reaction>
+  </ReactionsList>
+</Model>
