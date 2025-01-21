@@ -6,7 +6,7 @@
   <SpeciesList>
      <Species>
        <Id>X1</Id>
-       <InitialPopulation>10000</InitialPopulation>
+       <InitialPopulation>8000</InitialPopulation>
      </Species>
      <Species>
        <Id>X2</Id>
@@ -14,7 +14,7 @@
      </Species>
      <Species>
        <Id>X3</Id>
-       <InitialPopulation>10000</InitialPopulation>
+       <InitialPopulation>9000</InitialPopulation>
      </Species>
   </SpeciesList>
 
