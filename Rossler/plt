@@ -1,0 +1,8 @@
+set term png size 800,600
+set output 'plot.png'
+set xlabel "Time hrs"
+set ylabel "Concentration (nM)"
+plot "model_output/stats/means.txt" u ($1/3600):($2/10000) w l lw 2 lc rgb "dark-red" t "X1",\
+     "" u ($1/3600):($3/10000) w l lw 2 lc rgb "dark-green" t "X2",\
+     "" u ($1/3600):($4/10000) w l lw 2 lc rgb "dark-blue" t "X3"
+exit

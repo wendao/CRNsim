@@ -1,1 +1,1 @@
-../../StochKit/ssa -m model.xml -t 144000 -r 10 -i 500 -f
+../../StochKit/ssa -m model.xml -t 1800 -r 1 -i 500 -f

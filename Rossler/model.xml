@@ -6,15 +6,15 @@
   <SpeciesList>
      <Species>
        <Id>X1</Id>
-       <InitialPopulation>140000</InitialPopulation>
+       <InitialPopulation>16000</InitialPopulation>
      </Species>
      <Species>
        <Id>X2</Id>
-       <InitialPopulation>150000</InitialPopulation>
+       <InitialPopulation>17000</InitialPopulation>
      </Species>
      <Species>
        <Id>X3</Id>
-       <InitialPopulation>160000</InitialPopulation>
+       <InitialPopulation>18000</InitialPopulation>
      </Species>
   </SpeciesList>
 
@@ -23,7 +23,7 @@
       <Id>R1</Id>
       <Description> X1 -> 2X1 </Description>
       <Type>mass-action</Type>
-      <Rate>0.002</Rate>
+      <Rate>0.03</Rate>
       <Reactants>
         <SpeciesReference id="X1" stoichiometry="1"/>
       </Reactants>
@@ -35,7 +35,7 @@
       <Id>R2</Id>
       <Description> 2X1 -> X1 </Description>
       <Type>mass-action</Type>
-      <Rate>2e-8</Rate>
+      <Rate>5e-9</Rate>
       <Reactants>
         <SpeciesReference id="X1" stoichiometry="2"/>
       </Reactants>
@@ -45,12 +45,12 @@
     </Reaction>
     <Reaction>
       <Id>R3</Id>
-      <Description> X1 + X2 -> 2X2 </Description>
+      <Description> X2 + X1 -> 2X2 </Description>
       <Type>mass-action</Type>
-      <Rate>4e-8</Rate>
+      <Rate>1e-8</Rate>
       <Reactants>
-        <SpeciesReference id="X1" stoichiometry="1"/>
         <SpeciesReference id="X2" stoichiometry="1"/>
+        <SpeciesReference id="X1" stoichiometry="1"/>
       </Reactants>
       <Products>
         <SpeciesReference id="X2" stoichiometry="2"/>
@@ -60,7 +60,7 @@
       <Id>R4</Id>
       <Description> X2 -> 0 </Description>
       <Type>mass-action</Type>
-      <Rate>0.000667</Rate>
+      <Rate>0.01</Rate>
       <Reactants>
         <SpeciesReference id="X2" stoichiometry="1"/>
       </Reactants>
@@ -69,7 +69,7 @@
       <Id>R5</Id>
       <Description> X1 + X3 -> 0 </Description>
       <Type>mass-action</Type>
-      <Rate>4e-8</Rate>
+      <Rate>1e-8</Rate>
       <Reactants>
         <SpeciesReference id="X1" stoichiometry="1"/>
         <SpeciesReference id="X3" stoichiometry="1"/>
@@ -79,7 +79,7 @@
       <Id>R6</Id>
       <Description> X3 -> 2X3 </Description>
       <Type>mass-action</Type>
-      <Rate>0.0011</Rate>
+      <Rate>0.0165</Rate>
       <Reactants>
         <SpeciesReference id="X3" stoichiometry="1"/>
       </Reactants>
@@ -91,7 +91,7 @@
       <Id>R7</Id>
       <Description> 2X3 -> X3 </Description>
       <Type>mass-action</Type>
-      <Rate>2e-8</Rate>
+      <Rate>5e-9</Rate>
       <Reactants>
         <SpeciesReference id="X3" stoichiometry="2"/>
       </Reactants>
@@ -101,3 +101,4 @@
     </Reaction>
   </ReactionsList>
 </Model>
+
