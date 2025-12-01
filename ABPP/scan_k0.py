@@ -56,7 +56,7 @@ template = """
        </Products>
      </Reaction>
      <Reaction>
-       <Id>R2</Id>
+       <Id>R3</Id>
        <Description> m+b->M+d </Description>
        <Type>mass-action</Type>
        <Rate>k2</Rate>
